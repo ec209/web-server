@@ -15,9 +15,9 @@ cd terraform
 # Setup Terraform 1.2.0 
 wget https://releases.hashicorp.com/terraform/1.2.0/terraform_1.2.0_darwin_amd64.zip
 unzip terraform_1.2.0_darwin_amd64.zip
-# Set the name as tf_12 to not override the terraform already setup
-mv terraform /usr/local/bin/tf_12
-tf_12 version
+# Set the name as tf_1.2 to not override the terraform already setup
+mv terraform /usr/local/bin/tf_1.2
+tf_1.2 version
 
 # Remove terraform binary zip
 rm terraform_1.2.0_darwin_amd64.zip
