@@ -36,7 +36,7 @@ resource "aws_security_group" "allow_http" {
 resource "aws_launch_configuration" "web-server" {
   image_id                    = data.aws_ami.ubuntu.id
   instance_type               = "t3a.micro"
-  security_groups             = [aws_security_group.allow_ssh.id, aws_security_group.allow_http.id]
+  security_groups             = [aws_security_group.allow_http.id,]
   associate_public_ip_address = true
   ebs_optimized               = false
   root_block_device {
@@ -68,7 +68,6 @@ cat > /var/www/html/index.nginx-debian.html << EOD
 EOD
 EOF
 
-<<<<<<< HEAD
   lifecycle {
     ignore_changes = [
       image_id,
