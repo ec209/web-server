@@ -36,7 +36,7 @@ resource "aws_security_group" "allow_http" {
 resource "aws_instance" "web-server" {
   ami                         = data.aws_ami.ubuntu.id
   instance_type               = "t3a.micro"
-  vpc_security_group_ids      = [aws_security_group.allow_ssh.id, aws_security_group.allow_http.id]
+  vpc_security_group_ids      = [aws_security_group.allow_http.id,]
   subnet_id                   = module.vpc.public_subnets[0]
   associate_public_ip_address = true
   monitoring                  = false
