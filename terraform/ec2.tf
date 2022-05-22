@@ -68,6 +68,7 @@ cat > /var/www/html/index.nginx-debian.html << EOD
 EOD
 EOF
 
+<<<<<<< HEAD
   lifecycle {
     ignore_changes = [
       image_id,
